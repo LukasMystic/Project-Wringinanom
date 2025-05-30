@@ -1,0 +1,636 @@
+:root{
+    --btn-hover-color: #dd648a;
+}
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+}
+html{
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.montserrat-kuda {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.montserrat-alternates-regular {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+/* back drop */
+
+#backdrop{
+    margin-top:4vh;
+}
+
+#backdrop .carousel-item{
+    height: 50vh;
+}
+
+#backdrop .carousel-item img{
+    filter: brightness(18%);
+}
+
+#backdrop .carousel-item .carousel-caption{
+    top: 35%;
+    z-index: 10;
+}
+
+#backdrop .carousel-caption  h5{
+    color: #FCA311;
+}
+
+/* .divider{
+    margin-top: 50px;
+} */
+
+/* about us */
+
+.center-vertical{
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.about-us-section{
+background-color: #ffffff;
+}
+
+.fonter h5{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fonter p{
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.title{
+  text-align: left;
+}
+
+.title h1{
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.title h3{
+    text-align: justify;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.title p{
+    text-align: justify;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.logo img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#title{
+    text-align: center;
+    padding: 5px;
+}
+
+#sub-title{
+    text-align: center;
+    padding: 5px;
+}
+
+#description{
+    text-align: justify;
+    padding: 5px;
+}
+
+#bulist{
+    margin-top: 10px;
+
+}
+
+.container-fluid{
+    --bs-gutter-x:0px;
+}
+
+.bg{
+    background: url(../assets/img/bromo.jpg) ;
+    background-size: cover;
+    height: 45vw;
+    width: 100vw;
+    position: relative;
+
+}
+
+#hexa1,
+#hexa2,
+#hexa3,
+#hexa4,
+#hexa5,
+#hexa6{
+    position: absolute;
+    z-index: 3;
+}
+
+#hexa1{
+    top: 7%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#hexa2{
+    top: 20%;
+    left: 33%;
+    transform: translate(-50%,50%);
+}
+
+
+#hexa3{
+    top: 50%;
+    left: 33%;
+    transform: translate(-50%,50%);
+}
+
+#hexa4{
+    top: 20%;
+    right: 28%;
+    transform: translate(-50%,50%);
+}
+
+#hexa5{
+    top:50%;
+    right: 28%;
+    transform: translate(-50%,50%);
+}
+
+#hexa6{
+    bottom: 7%;
+    left: 50%;
+    transform: translate(-50%)
+}
+
+.caption{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.caption h5{
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.caption p{
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+
+.container-hex {
+    width: 100px;
+    height: 100px;
+    padding: 0px;
+}
+
+.container-hex:hover{
+    opacity: 1;
+}
+
+
+
+
+.hexagon {
+    width: 100%;
+    height: 100%;
+    background-color: #14213D;
+    position: absolute;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transition: all 0.5s;
+    justify-content: center;
+
+}
+
+.hexagon img{
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+}
+
+
+.hexagon i{
+    color: #FCA311;
+}
+
+
+.hexagon:hover{
+    background-color: #284278;
+}
+
+.hexagon.align-content-center.text-center.active{
+    background-color: #284278;
+}
+
+.hexagon.align-content-center.text-center.active img{
+    color:#14213D;
+}
+
+@media screen and (max-width: 700px){
+
+    /* Universal box-sizing for consistency */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Background styling */
+.bg {
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    object-fit: contain;
+    position: relative;
+}
+
+/* Centering helper class */
+.terserah {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hexagon parent positioning */
+.parent {
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+/* Specific positioning for each hexagon */
+#hexa1 {
+    top: 10%;
+    left: 25%;  /* Centered with an even gap on both sides */
+}
+
+#hexa2 {
+    top: 10%;
+    left: 50%;  /* Centered horizontally */
+}
+
+#hexa3 {
+    top: 10%;
+    left: 75%;  /* Centered with an even gap on both sides */
+}
+
+#hexa4 {
+    top: 80%;
+    left: 25%;  /* Centered with an even gap on both sides */
+}
+
+#hexa5 {
+    top: 80%;
+    left: 50%;  /* Centered horizontally */
+}
+
+#hexa6 {
+    top: 80%;
+    left: 75%;  /* Centered with an even gap on both sides */
+}
+
+/* Container-hex styling */
+.container-hex {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hexagon styling */
+.hexagon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hexagon img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Icon font size */
+.hexagon i {
+    font-size: 12px;
+}
+
+/* Caption styling */
+.caption {
+    position: absolute;
+    top: 55%;
+    width: 100%;
+    text-align: center;
+}
+
+.caption h5 {
+    font-size: 12px;
+}
+
+.caption p {
+    font-size: 10px;
+}
+
+}
+
+
+#middleText{
+    color: white;
+    font-family: "Montserrat Alternates", sans-serif;
+    text-align: center;
+    justify-content: center;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+
+
+/* testimonial */
+
+
+#testimonialCarousel .carousel-item .img-wrapper {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 5px;
+    object-fit: contain;
+}
+
+#testimonialCarousel .carousel-item .img-wrapper img{
+    width: 100%;
+    height: 100%;
+}
+
+#testimonialCarousel .carousel-inner {
+    padding: 1em;
+}
+
+@media screen and (min-width: 577px) {
+    #testimonialCarousel .carousel-inner {
+      display: flex;
+      width: 90%;
+      margin-inline: auto;
+      padding: 1em 0;
+      overflow: hidden;
+    }
+    #testimonialCarousel .carousel-item {
+      display: block;
+      margin-right: 0;
+      flex: 0 0 calc(100% / 2);
+    }
+
+
+
+}
+@media screen and (min-width:701px) and (max-width:769px){
+    #middleText h4{
+        font-size: 10px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    #testimonialCarousel .carousel-item {
+      display: block;
+      margin-right: 0;
+      flex: 0 0 calc(100% / 3);
+    }
+}
+
+#testimonialCarousel .carousel .card {
+    margin: 0 0.5em;
+    border: 0;
+}
+
+#testimonialCarousel .carousel-control-prev,
+#testimonialCarousel .carousel-control-next {
+    width: 3rem;
+    height: 3rem;
+    background-color: grey;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#mirekel{
+    background-color: white;
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1500px){
+    #mirekel{
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 1501px) {
+    #kuda img{
+        margin-right: 5px;
+    }
+
+
+}
+
+
+
+@media screen and (min-width:1000px) and (max-width:1400px){
+    #hexa1{
+        top: 5%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    #hexa2{
+        top: 15%;
+        left: 30%;
+        transform: translate(-50%,50%);
+    }
+
+
+    #hexa3{
+        top: 45%;
+        left: 30%;
+        transform: translate(-50%,50%);
+    }
+
+    #hexa4{
+        top: 15%;
+        right: 25%;
+        transform: translate(-50%,50%);
+    }
+
+    #hexa5{
+        top:45%;
+        right: 25%;
+        transform: translate(-50%,50%);
+    }
+
+    #hexa6{
+        bottom: 5%;
+        left: 50%;
+        transform: translate(-50%)
+    }
+
+    .container-hex {
+        width: 80px;
+        height: 80px;
+        padding: 0px;
+    }
+}
+
+@media screen and (min-width:701px ) and (max-width:1000px){
+    #hexa1{
+        top: 5%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    #hexa2{
+        top: 15%;
+        left: 35%;
+        transform: translate(-50%,50%);
+    }
+
+
+    #hexa3{
+        top: 45%;
+        left: 35%;
+        transform: translate(-50%,50%);
+    }
+
+    #hexa4{
+        top: 15%;
+        right: 30%;
+        transform: translate(-50%,50%);
+    }
+
+    #hexa5{
+        top:45%;
+        right: 30%;
+        transform: translate(-50%,50%);
+    }
+
+    #hexa6{
+        bottom: 10%;
+        left: 50%;
+        transform: translate(-50%)
+    }
+
+
+    .container-hex {
+        width: 50px;
+        height: 50px;
+        padding: 0px;
+    }
+
+    .hexagon i{
+        font-size: 10px;
+    }
+
+    .caption h5{
+        font-size: 12px;
+    }
+
+    .caption p{
+        font-size: 10px;
+    }
+
+    #middleText h4{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:675px){
+    .container-fluid .row .title h1,
+    .container-fluid .row .title h3,
+    .container-fluid .row .title{
+        text-align: center;
+    }
+}
+
+
+@media screen and (max-width:400px){
+    #thio{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* contact-us */
+
+.container-contact-us .contact-person{
+    position: relative;
+    max-height: 500px;
+    max-width: 500px;
+    background-color: #7f7f7f;
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+
+.container-contact-us .contact-person img {
+    aspect-ratio: 1/1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire container */
+    mask-image: radial-gradient(circle); /* Mask image with radial gradient */
+}
+
+
+#wai {
+    color: #25d366;
+}
+
+#ig{
+    color: #C13584;
+}
+
+#fb{
+    color: #3b5998;
+}
+
+.parent{
+    z-index: 10;
+}
+
+.slide {
+    transition: all 0.3s ease;
+}

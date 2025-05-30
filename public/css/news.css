@@ -1,0 +1,299 @@
+.loading-container.initially-hidden {
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.loading-container {
+    animation: fadeIn 0.2s ease-out forwards;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1e2;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+/* body {
+    scroll-behavior: smooth;
+    background-color: #f4eec9;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow: hidden;
+  } */
+  body {
+    scroll-behavior: smooth;
+    background-color: #ffffff;
+    /* -ms-overflow-style: none;
+    scrollbar-width: none; */
+  }
+
+  /* body::-webkit-scrollbar {
+    display: none;
+  } */
+
+  /* header */
+  .header {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 20px;
+    color: #FCA311;
+    background-color:#14213D;
+    padding: 5px;
+	display: flex;
+	width: 100%;
+	padding-top: 50px;
+	margin-top: 50px;
+}
+
+/* search bar */
+#example input[type=text] {
+	padding: 10px;
+	font-size: 17px;
+	border: 1px solid grey;
+	width: 90%;
+	min-width: 200px;
+	background: #f1f1f1;
+	border-radius: 50px;
+  }
+
+  #example button {
+	width: 45px;
+	padding: 8px;
+	border-radius: 100px;
+	background: #f2b321;
+	color: white;
+	font-size: 17px;
+	border: 1px solid grey;
+	border-left: none;
+	cursor: pointer;
+	right: 0%;
+	margin-left: -52px;
+	margin-top: 2px;
+  }
+
+  #example::after {
+	content: "";
+	clear: both;
+	display: table;
+  }
+  #example {
+	  align-self: center;
+  }
+
+  #kol2{
+	right: 0%;
+  }
+/* end search bar */
+@media (max-width: 767.98px) {
+	.header .container {
+		text-align: center;
+	}
+	.header .container .row {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+/* ini akir */
+/* ini untuk hover button */
+
+
+/* catalog */
+.card{
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 1) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    overflow: hidden;
+    background-color: #14213daa;
+    border: none;
+}
+.card-img-top{
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    padding: 0px;
+    height: 20rem;
+    width: auto;
+    object-fit: cover;
+}
+.card-body {
+    padding: 20px;
+    color: #FCA311;
+    background-color: #14213d4a;
+    background-image: linear-gradient(to bottom, rgba(64, 47, 179, 0), rgba(255,204,204,0));
+    position: absolute;
+    top: 0%;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    box-sizing: border-box;
+    transition: height 0.05s ease-out;
+    margin-bottom: 12px;
+}
+/* isi .card-body */
+.deskripsi{
+    display: none;
+    font-size: 15px;
+    margin-top: 16px;
+    margin-bottom: 20px;
+    text-align: justify;
+    color: #FCA311;
+}
+.tombol{
+    opacity: 1;
+    transition: opacity 3s ease;
+    pointer-events:none;
+    display: none;
+}
+.tombol:hover{
+    display: block;
+    pointer-events:auto;
+}
+.tombol.disabled {
+    pointer-events: none; /* Menonaktifkan klik saat tombol non-aktif */
+}
+.tombol img{
+    font-size: smaller;
+    width: 130px;
+}
+.card-title{
+    font-size: 17px;
+    margin-top: -15px;
+    padding-top: 10px;
+    font-weight: bold;
+    font-family: "Montserrat Alternates", sans-serif;
+    text-align: center;
+	margin-bottom: 0px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+.kartu {
+    position: relative;
+    overflow: hidden;
+}
+
+/* hover */
+.kartu:hover .card-body {
+    height: 100%;
+    background-color: #14213ddc;
+    padding-bottom: 255px;
+    padding-top: 18px;
+    animation: fadeIn 1.2s forwards;
+}
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+.card-body:hover .tombol {
+    display: block;
+    pointer-events: auto;
+}
+.kartu:hover .tombol {
+    display: block;
+}
+.kartu:hover .deskripsi {
+    display: block;
+}
+.kartu:hover .card-title{
+    margin-top: 0px;
+    font-size: 20px;
+}
+.kartu:hover > .card-body{
+    top: 0px;
+}
+/* responsive */
+@media (max-width: 1200px) and (min-width: 768px){
+    .kartu:hover .card-body {
+        height: 100%;
+    }
+    .deskripsi {
+        font-size: 12.6px;
+    }
+    .card-title{
+        margin-top: -18px;
+        padding-bottom: 13px;
+        font-size: smaller;
+    }
+    .kartu:hover .card-title{
+        font-size: 15px;
+    }
+    .kartu:hover .card-body{
+        padding-top: 10px;
+    }
+    .kartu:hover .deskripsi{
+        margin-top: -3px;
+    }
+}
+@media (max-width: 365px){
+    .kartu:hover .card-body {
+        height: 100%;
+    }
+    .kartu:hover .card-title{
+        margin-top: 0px;
+        font-size: 17px;
+    }
+    .deskripsi {
+        font-size: 13px;
+    }
+    .card-title{
+        font-size: smaller;
+        margin-top: -17px;
+        padding-bottom: 10px;
+    }
+}
+
+/* to-top */
+#myBtn:hover {
+    background-color: #55555500;
+}
+#myBtn{
+    opacity: 0;
+	display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 23px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    border-radius: 50px;
+}
+#myBtn img{
+    align-content: center;
+    vertical-align: middle;
+    margin: -13px;
+}
